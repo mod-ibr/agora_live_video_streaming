@@ -19,7 +19,18 @@ class CustomTextButton extends StatelessWidget {
       style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Text(label), Icon(icon)],
+        children: [
+          Text(
+            label,
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.w800),
+          ),
+          const SizedBox(width: 12),
+          Icon(
+            icon,
+            color: Colors.black,
+          )
+        ],
       ),
     );
   }
